@@ -1,0 +1,44 @@
+[model]
+name = "ddnet_attention_v1_dual_linear_e100"
+family = "trainable"
+source = "DD-Net incidence attention v1 at both neighborhood scales; original concat-linear fusion"
+implementation_status = "ATTENTION_V1_DUAL_SCALE_ORIGINAL_LINEAR_FUSION"
+configuration_status = "USER_AUTHORIZED_ATTENTION_V1_MULTISCALE_PAIR"
+backbone_source_commit = "eecf8a3078f0a178dbc7b28723da20f94ce36985"
+encoder_dim = 20
+block_list = [2, 8, 2]
+drop_path_rate = 0.1
+mlp_ratio = 4.0
+attention_mode = "node"
+batching_mode = "broadcast"
+hypergraph_batching_revision = "isolated_v2"
+wavelet_subband_grouping = "openstl"
+residual_layer_scale_mode = "shared_openstl"
+hypergraph_scales = ["small", "large"]
+hypergraph_scale_gates = [1.0, 1.0]
+hyperedge_weighting = "incidence_attention"
+incidence_attention_heads = 2
+incidence_attention_channels = 8
+incidence_attention_logit_scale = 0.1
+hypergraph_scale_fusion = "linear"
+scale_gate_hidden_channels = 16
+use_modulation_mask = true
+use_temporal_mixer = true
+use_wavelet = true
+
+[training]
+epochs = 100
+batch_size = 4
+drop_last = true
+optimizer = "adamw"
+learning_rate = 0.0001
+weight_decay = 0.01
+optimizer_betas = [0.9, 0.999]
+optimizer_eps = 0.00000001
+loss = "mse_hffl"
+hffl_weight = 0.001
+scheduled_sampling = false
+scheduler = "cosine"
+minimum_learning_rate = 0.000001
+gradient_clip_norm = 0.0
+protocol_status = "USER_AUTHORIZED_ATTENTION_V1_MULTISCALE_PAIR"

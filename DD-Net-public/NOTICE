@@ -1,0 +1,18 @@
+DD-Net: Dual-Dynamic Adaptive Network for Precipitation Nowcasting
+Copyright 2026 DD-Net contributors.
+
+This project includes a modified WaST backbone derived from OpenSTL:
+https://github.com/chengtan9907/OpenSTL
+Commit: eecf8a3078f0a178dbc7b28723da20f94ce36985
+Copyright 2022-2023 CAIRI AI Lab.
+
+OpenSTL-derived source is subject to Apache License 2.0. Its original
+license text is retained in licenses/OPENSTL-APACHE-2.0.txt.
+DD-Net modifies the input encoder and translator blocks; see
+THIRD_PARTY_NOTICES.md for the implementation changes.
+
+This project also includes the author-maintained SwinLSTM-D core at commit
+4425bcfefbebfac85c9fc6c6659361b8154d5ca3, under the MIT License.
+The original notice is retained in licenses/SWINLSTM-MIT.txt.
+
+Installed dependencies retain their respective copyrights and licenses.
