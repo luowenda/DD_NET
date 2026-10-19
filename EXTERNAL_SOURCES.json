@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "models": {
+    "motionrnn": {
+      "repository": "thuml/MotionRNN",
+      "commit": "002415f4e7384f14fd20501b76febe8c5caaca7e",
+      "license_status": "NO_LICENSE_FOUND_AT_AUDITED_COMMIT_NOT_VENDORED",
+      "files": {
+        "model.py": {
+          "upstream_path": "core/models/MotionRNN_PredRNN.py",
+          "upstream_sha256": "c70fa79cca421c4decc416fe1868e2cbb2d1b129c80871eb436ecab2f73a8f46",
+          "prepared_ast_sha256": "e8ac76d2ec3bc18380127c461e9e092790038b66062797cf145c37d30f0aefc3"
+        },
+        "modules.py": {
+          "upstream_path": "core/layers/SpatioTemporalLSTMCell_Motion_Highway.py",
+          "upstream_sha256": "19c4569a0acd94523abe73bf65bb41c99492fff3bfd0780cf5806605a1b11fab",
+          "prepared_ast_sha256": "75374a0048bbd6f9851cd91c859637af276543a61501b27b0f65eea407cdd2bd"
+        },
+        "motion_gru.py": {
+          "upstream_path": "core/layers/MotionGRU.py",
+          "upstream_sha256": "7a9eefcdabb5371dca2a16c9e556da6ce4047faf6c388c520a8faef201e5758e",
+          "prepared_ast_sha256": "f4d00625dd6b8bc4bef865cc79edc13047c224209f3af50e72b2f199e80a984d"
+        }
+      },
+      "support_files": {
+        "__init__.py": {
+          "public_path": "src/ddnet_revision/models/external_support/motionrnn_init.py",
+          "prepared_ast_sha256": "fdf3a280b4f59ffd0f0abf71cf410ce98d366a7c1cf327405ab4999777acdfac"
+        }
+      }
+    },
+    "trajgru": {
+      "repository": "Hzzone/Precipitation-Nowcasting",
+      "commit": "1e38d21aec77522dcbce9c1ecdd2dab766112788",
+      "license_status": "NO_LICENSE_FOUND_AT_AUDITED_COMMIT_NOT_VENDORED",
+      "files": {
+        "model.py": {
+          "upstream_path": "nowcasting/models/model.py",
+          "upstream_sha256": "bcd26a98ebf7049edb79899c88712c04f2ff92712232ac7c4f2a192e145d81d7",
+          "prepared_ast_sha256": "7f7be284b4c1936b51f6bdbcb69fd6ed2e20b12272173dfe5f96c33035488102"
+        },
+        "trajgru.py": {
+          "upstream_path": "nowcasting/models/trajGRU.py",
+          "upstream_sha256": "ca6c80631ed83d0981dd9aa06aefb357376198f30200a837c736326e7a4e19cb",
+          "prepared_ast_sha256": "68f79c5b5d873aa7bd50d799f65c2cbd7b0d06e1dbbc293aabe436fca1a44fdd"
+        },
+        "encoder.py": {
+          "upstream_path": "nowcasting/models/encoder.py",
+          "upstream_sha256": "b8aa880de161b96a30822d134bb7d8e3787fad17c7a828db32fd544c614cf152",
+          "prepared_ast_sha256": "d1288113b396d7034e2b1a8175d9fd7451c52c397dd9b5a8069ac5eeb9938356"
+        },
+        "forecaster.py": {
+          "upstream_path": "nowcasting/models/forecaster.py",
+          "upstream_sha256": "dde392f26a246fa1e6b0dc755a4f67295ea3ba40e544e7114c8595659f9ec8ca",
+          "prepared_ast_sha256": "154b74f04d89fab95ba545ee62830691de2b99a4608927dee281fb2afd99bcd7"
+        }
+      },
+      "support_files": {
+        "__init__.py": {
+          "public_path": "src/ddnet_revision/models/external_support/trajgru_init.py",
+          "prepared_ast_sha256": "f261b7523b097de10b7ce0300823091d2f9c9a0f8429abe2dcf7faf7b8f0f10c"
+        },
+        "layers.py": {
+          "public_path": "src/ddnet_revision/models/external_support/trajgru_layers.py",
+          "prepared_ast_sha256": "f92b9dd95fa3224294e866f70439a49db1635fad0acdaf1e71ccb548905fd624"
+        }
+      }
+    }
+  }
+}

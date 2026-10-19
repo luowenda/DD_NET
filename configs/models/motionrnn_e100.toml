@@ -1,0 +1,30 @@
+[model]
+name = "motionrnn_e100"
+family = "trainable"
+source = "THUML author-maintained MotionRNN PyTorch release"
+source_url = "https://github.com/thuml/MotionRNN"
+source_commit = "002415f4e7384f14fd20501b76febe8c5caaca7e"
+implementation_status = "AUTHOR_MAINTAINED_OFFICIAL_PYTORCH_RELEASE"
+configuration_status = "AUTHOR_RELEASED_HUMAN_CONFIG_WITH_E100_RADAR_PROTOCOL"
+reference_config = "human_script/MotionRNN_PredRNN_human_train.sh"
+hidden_dims = [64, 64, 64, 64]
+filter_size = 5
+patch_size = 4
+layer_norm = false
+
+[training]
+epochs = 100
+batch_size = 4
+drop_last = true
+optimizer = "adam"
+learning_rate = 0.0003
+weight_decay = 0.0
+loss = "model"
+scheduled_sampling = true
+sampling_unit = "sample_frame"
+scheduler = "none"
+gradient_clip_norm = 0.0
+sampling_stop_iter = 13700
+sampling_start_value = 1.0
+sampling_changing_rate = 0.000072992700729927
+protocol_status = "LOCKED_BY_USER"

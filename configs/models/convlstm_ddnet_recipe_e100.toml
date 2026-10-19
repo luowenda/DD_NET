@@ -1,0 +1,33 @@
+[model]
+name = "convlstm_ddnet_recipe_e100"
+family = "trainable"
+source = "OpenSTL benchmark"
+source_url = "https://github.com/chengtan9907/OpenSTL"
+source_commit = "eecf8a3078f0a178dbc7b28723da20f94ce36985"
+implementation_status = "PINNED_OPENSTL_MODEL_WITH_UNIFIED_DDNET_OPTIMIZATION_PROTOCOL"
+configuration_status = "OPENSTL_ARCHITECTURE_NATIVE_MSE_WITH_DDNET_MATCHED_OPTIMIZATION_BUDGET"
+reference_config = "OpenSTL configs/mmnist/ConvLSTM.py"
+hidden_dims = [128, 128, 128, 128]
+filter_size = 5
+patch_size = 4
+layer_norm = false
+
+[training]
+epochs = 100
+batch_size = 4
+drop_last = true
+optimizer = "adamw"
+learning_rate = 0.0001
+weight_decay = 0.01
+optimizer_betas = [0.9, 0.999]
+optimizer_eps = 0.00000001
+loss = "mse"
+scheduled_sampling = true
+sampling_unit = "sample_frame"
+scheduler = "cosine"
+minimum_learning_rate = 0.000001
+gradient_clip_norm = 0.0
+sampling_stop_iter = 13700
+sampling_start_value = 1.0
+sampling_changing_rate = 0.000072992700729927
+protocol_status = "LOCKED_BY_USER"

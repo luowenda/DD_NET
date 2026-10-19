@@ -1,0 +1,29 @@
+[model]
+name = "trajgru_e100"
+family = "trainable"
+source = "PyTorch port checked against the authors' official sxjscience/HKO-7 MXNet release"
+source_url = "https://github.com/Hzzone/Precipitation-Nowcasting"
+source_commit = "1e38d21aec77522dcbce9c1ecdd2dab766112788"
+official_reference_url = "https://github.com/sxjscience/HKO-7"
+official_reference_commit = "57b987bd893bd6910996494c247359ace371d333"
+implementation_status = "PYTORCH_PORT_BASED_ON_OFFICIAL_MXNET_RELEASE"
+configuration_status = "OFFICIAL_HKO_ARCHITECTURE_PARAMETERS_WITH_E100_RADAR_PROTOCOL"
+reference_config = "experiments/hko/configurations/trajgru_55_55_33_1_64_1_192_1_192_13_13_9_b4.yml"
+encoder_channels = [8, 64, 192]
+hidden_dims = [64, 192, 192]
+links = [13, 13, 9]
+
+[training]
+epochs = 100
+batch_size = 4
+drop_last = true
+optimizer = "adam"
+learning_rate = 0.0001
+weight_decay = 0.0
+optimizer_betas = [0.5, 0.999]
+optimizer_eps = 0.00000001
+loss = "mse"
+scheduled_sampling = false
+scheduler = "none"
+gradient_clip_norm = 50.0
+protocol_status = "LOCKED_BY_USER"
